@@ -1,4 +1,5 @@
-#how to use it
+# how to use it
+
 First, clone the repository:
 ```bash
 git clone https://github.com/aderthecoder/JSANN.git
