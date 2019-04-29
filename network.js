@@ -195,16 +195,28 @@ Network.prototype = {
         return this.backward(outputs);
     },
 
-    save: function(filename) {
+    save: function(fileName) {
         
-	fs.writeFile(filename, JSON.stringify(this), err => {
+	fs.writeFile(fileName, JSON.stringify(this), err => {
 
             if(err) { console,log(err); }
         })
+    },
+
+    load: function(fileName) {
+        const net = JSON.parse(fs.readFileSync(fileName));
+	if(this.neurons.length !== net.neurons.length) { throw new Error("this network 's number of layers does not equal to file's network's number of layers"); }
+	for(let i = 0; i < this.neurons.length; i++) { 
+		if(this.neurons[i].length !== net.neurons[i].length) {
+                    throw new Error(`this network's ${i}th layer's number of neurons does not equal to file's network's ${i}th layer's number of neuron`);
+		}
+		this.neurons = net.neurons;
+		this.biases = net.biases;
+		this.z = net.z;
+		this.learningRate = net.learningRate;
+		this.L = net.L;
+	}
     }
-
-
-    //TODO: load
 
 };
 
