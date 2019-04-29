@@ -190,7 +190,7 @@ Network.prototype = {
         
     },
 
-    train: function(inputs, outputs) {
+    train: function({inputs, outputs}) {
         this.forward(inputs);
         return this.backward(outputs);
     },
