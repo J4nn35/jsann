@@ -198,8 +198,7 @@ Network.prototype = {
     save: function(fileName) {
         
 	fs.writeFile(fileName, JSON.stringify(this), err => {
-
-            if(err) { console,log(err); }
+            if(err) { console.log(err); }
         })
     },
 
