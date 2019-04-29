@@ -173,7 +173,6 @@ Network.prototype = {
             dcdb[i] = dcdbl;
             dcdbl = [];
         }
-        
         //calculate the derivative of weights and biases
         for(let l = this.L - 1; l > 0; l--) {
             for(let n = 0; n < this.neurons[l].length; n++) {
@@ -190,7 +189,7 @@ Network.prototype = {
         
     },
 
-    train: function(inputs, outputs) {
+    train: function({inputs, outputs}) {
         this.forward(inputs);
         return this.backward(outputs);
     },

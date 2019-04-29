@@ -8,8 +8,12 @@ for(let i = 0; i <= 10000; i++) {
     
     let b1 = Math.round(Math.random());
     let b2 = Math.round(Math.random());
+    let data = {
+        inputs: [b1, b2],
+        outputs: [b1 ^ b2]
+    };
 
-    xor.train([b1, b2], [b1 ^ b2]);
+    xor.train(data);
 
 }
 

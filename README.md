@@ -16,7 +16,10 @@ const net = new Network(numberOfInputNeurons, numberOfOutputNeurons, numberOfHid
 //train it
 const trainingData = [[1, 2], [2, 4], [3, 6]];
 for(const data of trainingData) {
-    net.train([data[0]], [data[1]]);
+    net.train({
+        inputs: [data[0]],
+        outputs: [data[1]]
+    });
 }
 //then use it
 const testData = [1, 2, 3]
