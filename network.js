@@ -1,3 +1,5 @@
+const fs = require("fs");
+
 function Network(inputNeurons, outputNeurons, hiddenLayers = 0, hiddenNeurons = 0, learningRate = 0.001) {
 
     //cell[L][n] = a_n^(L)
@@ -193,7 +195,16 @@ Network.prototype = {
         return this.backward(outputs);
     },
 
-    //TODO: save, load
+    save: function(filename) {
+        
+	fs.writeFile(filename, JSON.stringify(this), err => {
+
+            if(err) { console,log(err); }
+        })
+    }
+
+
+    //TODO: load
 
 };
 
