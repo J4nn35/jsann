@@ -199,7 +199,7 @@ Network.prototype = {
         
 	fs.writeFile(fileName, JSON.stringify(this), err => {
             if(err) { console.log(err); }
-        })
+        });
     },
 
     load: function(fileName) {
