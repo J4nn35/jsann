@@ -1,12 +1,12 @@
 # how to use it
 
-First, clone the repository:
+First, install the package through npm:
 ```bash
-git clone https://github.com/aderthecoder/JSANN.git
+npm i --lock jsann
 ```
 then type this code:
 ```js
-const Network = require("./network");
+const Network = require("network");
 
 numberOfInputNeurons = 1;
 numberOfOutputNeurons = 1;
