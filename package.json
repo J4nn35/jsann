@@ -1,0 +1,19 @@
+{
+  "name": "jsann",
+  "version": "1.0.0",
+  "description": "an ANN written in javascript",
+  "main": "network.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/aderthecoder/JSANN.git"
+  },
+  "author": "aderthecoder",
+  "license": "GPL-3.0",
+  "bugs": {
+    "url": "https://github.com/aderthecoder/JSANN/issues"
+  },
+  "homepage": "https://github.com/aderthecoder/JSANN#readme"
+}
