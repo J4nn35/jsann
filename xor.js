@@ -2,7 +2,7 @@
 
 const Network = require("./network");
 
-const xor = new Network(2, 1, 5, 5, 1);
+const xor = new Network(2, 1, 2, 3, 0.1);
 
 for(let i = 0; i <= 10000; i++) {
     

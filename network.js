@@ -73,12 +73,12 @@ function Network(inputNeurons, outputNeurons, hiddenLayers = 0, hiddenNeurons = 
 
 //activation function
 Network.activation = function(x) {
-    return x > 0 ? 0.5 * x : 0.01 * x;
+    return x > 0 ? x : 0.01 * x;
 };
 
 //derivative of the activation function
 Network.dactivation = function(x) {
-    return x > 0 ? 0.5 : 0.01;
+    return x > 0 ? 1 : 0.01;
 };
 
 //cost function
@@ -87,7 +87,7 @@ Network.cost = function(outputs, y) {
     for(let i = 0; i < y.length; i++) {
         res += Math.pow(outputs[i] - y[i], 2);
     }
-    return 0.5 * y.length * res;
+    return 0.5 * res;
 }
 
 //derivative of the cost function
