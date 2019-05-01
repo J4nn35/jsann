@@ -1,6 +1,6 @@
 //creates a net that simulates a xor gate
 
-const Network = require("./network");
+const Network = require("jsann");
 
 const xor = new Network(2, 1, 2, 3, 0.1);
 

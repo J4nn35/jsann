@@ -6,7 +6,7 @@ npm i --lock jsann
 ```
 then type this code:
 ```js
-const Network = require("network");
+const Network = require("jsann");
 
 numberOfInputNeurons = 1;
 numberOfOutputNeurons = 1;
